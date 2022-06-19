@@ -79,10 +79,6 @@ epsilon_by_epsiode = lambda frame_idx: EPS_END + (EPS_START - EPS_END) * math.ex
 
 def stack_frames(frames, state, is_new = False):
     frame = preprocess_frame(state, (104, 177, 0, 239), 84)
-
-    plt.imshow(frame, cmap='gray')
-    plt.show()
-
     frames = stack_frame(frames, frame, is_new)
     return frames
 
